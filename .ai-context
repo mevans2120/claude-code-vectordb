@@ -1,0 +1,12 @@
+# Project Knowledge Base
+
+A vector database with project patterns and documentation is available if needed:
+
+```typescript
+import { ChromaClient } from 'chromadb';
+const client = new ChromaClient({ path: 'http://localhost:8000' });
+const collection = await client.getCollection({ name: 'project-docs' });
+const results = await collection.query({ queryTexts: ["your search"], nResults: 5 });
+```
+
+Contains: architecture decisions, code patterns, implementation examples, best practices
